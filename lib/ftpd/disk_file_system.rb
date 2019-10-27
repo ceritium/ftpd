@@ -324,7 +324,7 @@ module Ftpd
       end
 
       def gid_name(gid)
-        Etc.getgrgid(gid).name
+        Etc.getgrgid(gid).name rescue nil
       end
 
       def identifier(stat)
